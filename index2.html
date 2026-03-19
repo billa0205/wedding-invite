@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billakanti Vari Pelli Pilupu</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --gold: #d4af37; --bg: #0a0a0a; --glass: rgba(255, 255, 255, 0.05); }
+        
+        body { margin: 0; padding: 0; background-color: var(--bg); color: white; font-family: 'Montserrat', sans-serif; text-align: center; overflow-x: hidden; }
+
+        /* Floating Language Toggle */
+        .lang-toggle {
+            position: fixed; top: 20px; right: 20px; z-index: 1000;
+            background: var(--gold); color: black; border: none;
+            padding: 10px 18px; border-radius: 30px; font-weight: bold;
+            cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero.jpg');
+            background-size: cover; background-position: center;
+        }
+
+        .family-title { font-size: 1.1rem; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 0; }
+        h1 { font-family: 'Great Vibes', cursive; font-size: clamp(3rem, 10vw, 4.5rem); color: var(--gold); margin: 10px 0; }
+        
+        .section { padding: 60px 20px; max-width: 900px; margin: auto; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+
+        /* Family Info Cards */
+        .family-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .family-card { background: var(--glass); padding: 25px; border-radius: 15px; border: 1px solid rgba(212, 175, 55, 0.1); }
+        .family-card h3 { color: var(--gold); font-family: 'Great Vibes', cursive; font-size: 2rem; margin-top: 0; }
+
+        /* Gallery (5 Pics) */
+        .gallery-grid {
+            display: flex; gap: 15px; overflow-x: auto; padding: 20px 10px;
+            scrollbar-width: none; scroll-snap-type: x mandatory;
+        }
+        .gallery-grid::-webkit-scrollbar { display: none; }
+        .gallery-item { flex: 0 0 85%; max-width: 320px; height: 450px; scroll-snap-align: center; border-radius: 15px; border: 2px solid var(--gold); overflow: hidden; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Maps Button */
+        .btn-maps {
+            display: inline-block; background: var(--gold); color: black;
+            padding: 18px 40px; border-radius: 50px; text-decoration: none;
+            font-weight: bold; margin-top: 20px; transition: 0.3s;
+        }
+
+        .te { display: none; font-family: 'Noto Sans Telugu', sans-serif; line-height: 1.8; }
+
+        @media (max-width: 768px) {
+            .family-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="lang-toggle" onclick="toggleLang()">తెలుగు / EN</button>
+
+    <div class="hero">
+        <p class="family-title en">Billakanti Family Welcomes You</p>
+        <p class="family-title te">బిల్లాకంటి వారి వివాహ ఆహ్వానం</p>
+        <h1>Chakradhar & Soumya</h1>
+		    <p class="en" style="font-size: 1.2rem;"><b>Sumuhoortham: 10:30 AM</b></p>
+            <p class="te" style="font-size: 1.2rem;"><b>సుముహూర్తం: ఉదయం 10:30 గంటలకు</b></p>
+        <p class="en" style="font-size: 1.3rem; letter-spacing: 2px;">WEDNESDAY, APRIL 29, 2026</p>
+        <p class="te" style="font-size: 1.3rem;">బుధవారం, ఏప్రిల్ 29, 2026</p>
+    </div>
+
+    <div class="section">
+        <div class="family-container">
+            <div class="family-card">
+                <h3 class="en">The Groom</h3>
+                <h3 class="te">వరుడు</h3>
+                <p><b>Chakradhar</b></p>
+                <p style="font-size: 0.9rem; opacity: 0.8;">
+                    <span class="en">S/o Billakanti Krishnaiah (Late) & <br>Billakanti Saijyothi</span>
+                    <span class="te">బిల్లాకంటి కృష్ణయ్య (స్వర్గస్తులు) & <br>బిల్లాకంటి సాయిజ్యోతి గారి కుమారుడు</span>
+                </p>
+            </div>
+            <div class="family-card">
+                <h3 class="en">The Bride</h3>
+                <h3 class="te">వధువు</h3>
+                <p><b>Soumya</b></p>
+                <p style="font-size: 0.9rem; opacity: 0.8;">
+                    <span class="en">D/o Pola Venugopal & <br>Pola Kanyakumari</span>
+                    <span class="te">పోల వేణుగోపాల్ & <br>పోల కన్యాకుమారి గారి కుమార్తె</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="en" style="font-family: 'Great Vibes'; font-size: 2.5rem; color: var(--gold);">Engagement Moments</h2>
+        <h2 class="te" style="color: var(--gold);">నిశ్చితార్థ మధుర జ్ఞాపకాలు</h2>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="eng1.jpeg"></div>
+            <div class="gallery-item"><img src="eng2.jpeg"></div>
+            <div class="gallery-item"><img src="eng3.jpeg"></div>
+            <div class="gallery-item"><img src="eng4.jpeg"></div>
+            <div class="gallery-item"><img src="eng5.jpeg"></div>
+        </div>
+        <p style="font-size: 0.8rem; opacity: 0.5;">Swipe for more →</p>
+    </div>
+
+    <div class="section">
+        <h2 class="en" style="font-family: 'Great Vibes'; font-size: 2.5rem; color: var(--gold);">Wedding Venue</h2>
+        <h2 class="te" style="color: var(--gold);">వేదిక</h2>
+        
+        <div style="background: var(--glass); padding: 30px; border-radius: 20px;">            
+            <p style="margin-top: 20px; font-size: 1.3rem;">Lahari Gardens</p>
+            <p style="opacity: 0.8;">Nagarkurnool, Telangana</p>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Lahari+Gardens+Nagarkurnool" 
+               target="_blank" class="btn-maps">
+                <span class="en">📍 Open in Google Maps</span>
+                <span class="te">📍 మ్యాప్ లో చూడండి</span>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleLang() {
+            const en = document.querySelectorAll('.en');
+            const te = document.querySelectorAll('.te');
+            if (en[0].style.display === 'none') {
+                en.forEach(el => el.style.display = 'block');
+                te.forEach(el => el.style.display = 'none');
+            } else {
+                en.forEach(el => el.style.display = 'none');
+                te.forEach(el => el.style.display = 'block');
+            }
+        }
+    </script>
+</body>
+</html>
