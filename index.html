@@ -25,12 +25,32 @@
             background-size: 40px 40px;
         }
 
-        .lang-toggle {
-            position: fixed; top: 1rem; right: 1rem; z-index: 1000;
-            background: var(--gold); color: black; border: none;
-            padding: 8px 15px; border-radius: 20px; font-weight: bold; cursor: pointer;
+      .lang-toggle {
+            position: fixed; 
+            top: 20px; 
+            right: 20px; 
+            z-index: 1000;
+            background: var(--gold); 
+            color: black; 
+            border: 2px solid rgba(0,0,0,0.1);
+            padding: 10px 20px; 
+            border-radius: 25px; 
+            font-weight: bold; 
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
 
+        /* Adjusts the button for mobile phones so it doesn't block content */
+        @media (max-width: 480px) {
+            .lang-toggle {
+                top: 12px;
+                right: 12px;
+                padding: 6px 14px;
+                font-size: 0.8rem;
+            }
+        }
         .hero {
             padding: 30px 20px;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('hero.jpg');
