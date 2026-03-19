@@ -25,11 +25,11 @@
             background-size: 40px 40px;
         }
 
-      .lang-toggle {
+.lang-toggle {
             position: fixed; 
             top: 20px; 
             right: 20px; 
-            z-index: 1000;
+            z-index: 99999 !important; /* Forces it to the absolute front layer */
             background: var(--gold); 
             color: black; 
             border: 2px solid rgba(0,0,0,0.1);
@@ -40,14 +40,24 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             font-size: 0.9rem;
             transition: all 0.3s ease;
+
+            /* FIX: Ensures the button appears immediately on page load */
+            opacity: 1 !important;
+            display: block !important;
+            visibility: visible !important;
+            
+            /* Prevents flickering on mobile during the hero zoom animation */
+            will-change: transform;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
         }
 
-        /* Adjusts the button for mobile phones so it doesn't block content */
+        /* Responsive adjustment for mobile phones */
         @media (max-width: 480px) {
             .lang-toggle {
                 top: 12px;
                 right: 12px;
-                padding: 6px 14px;
+                padding: 8px 16px;
                 font-size: 0.8rem;
             }
         }
@@ -107,8 +117,8 @@
 
     <div class="hero">
         <div class="reveal active">
-            <p class="te" style="font-size: 1.2rem; color: var(--gold); margin-bottom: 20px;">ఓం వెంకటేశాయ నమః</p>
-            <p class="en" style="font-size: 0.9rem; color: var(--gold); margin-bottom: 20px;">Om Venkateshaya Namaha</p>
+            <p class="te" style="font-size: 1.2rem; color: var(--gold); margin-bottom: 20px;">ఓం నమో వేంకటేశాయ నమః</p>
+            <p class="en" style="font-size: 0.9rem; color: var(--gold); margin-bottom: 20px;">Om Namo Venkateshaya Namaha</p>
         </div>
         
         <div class="family-invite-container">
